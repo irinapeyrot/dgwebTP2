@@ -1,0 +1,7 @@
+/* REPARTO */
+.cast{
+  display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px;
+}
+.cast .card:hover{ box-shadow:0 6px 16px rgba(0,0,0,.4); transform:translateY(-6px) scale(1.01); }
+.cast img{ height:180px; width:100%; object-fit:cover; border-radius:12px; }
+.role{ color:#c8c8ff; font-size:13px; }

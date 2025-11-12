@@ -1,0 +1,15 @@
+/* CONTACTO */
+form{ display:grid; gap:12px; }
+label span{ display:block; font-size:13px; color:#e7e7ff; margin-bottom:6px; }
+input, textarea{
+  width:100%; color:var(--ink); background:#100022;
+  border:1px solid var(--line); border-radius:12px; padding:10px 12px;
+}
+input:invalid, textarea:invalid{ border-color:#ff6b6b; }
+
+.form-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+}

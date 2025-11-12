@@ -1,0 +1,36 @@
+/* PRODUCCION */
+.produ .card h3{ margin-top:0; }
+
+.gallery-snap{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  padding-bottom:6px;
+
+  /* hace que las fotos “asomen” a los bordes de la card */
+  margin-inline:-8px;
+  padding-inline:8px;
+}
+
+.gallery-snap img{
+  height:180px;
+  flex:0 0 auto;             /* no se encogen */
+  border-radius:12px;
+  border:1px solid var(--line);
+  scroll-snap-align:center;  /* centra cada imagen al frenar */
+  transition:transform .2s, box-shadow .2s;
+}
+
+.gallery-snap img:hover{
+  box-shadow:0 6px 16px rgba(0,0,0,.4);
+  transform:translateY(-2px);
+}
+
+/* scrollbar opcional */
+.gallery-snap::-webkit-scrollbar{ height:8px; }
+.gallery-snap::-webkit-scrollbar-thumb{
+  background:var(--accent2);
+  border-radius:999px;
+}

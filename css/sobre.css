@@ -1,0 +1,52 @@
+/* SOBRE */
+.sobre .card img{ border-radius:12px; border:1px solid var(--line); }
+audio{ width:100%; margin-top:10px; }
+
+.wrap + .wrap {
+  margin-top: 60px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-auto-flow: column;          /* columnas continuas */
+  grid-auto-columns: min-content;  /* cada imagen ocupa su ancho */
+  gap:12px;
+  overflow-x:auto;
+  padding-bottom:6px;
+}
+.gallery-grid img{
+  height:180px;
+  border-radius:12px;
+  border:1px solid var(--line);
+}
+.gallery-snap{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  padding-bottom:6px;
+  margin-inline:-8px;    /* deja que las fotos “asomen” */
+  padding-inline:8px;
+}
+
+.gallery-snap img{
+  height:180px;
+  flex:0 0 auto;
+  border-radius:12px;
+  border:1px solid var(--line);
+  scroll-snap-align:center;
+  transition:transform .2s, box-shadow .2s;
+}
+
+.gallery-snap img:hover{
+  box-shadow:0 6px 16px rgba(0,0,0,.4);
+  transform:translateY(-2px);
+}
+
+/* Personalización opcional de scrollbar */
+.gallery-snap::-webkit-scrollbar{ height:8px; }
+.gallery-snap::-webkit-scrollbar-thumb{
+  background:var(--accent2);
+  border-radius:999px;
+}
