@@ -175,3 +175,27 @@ footer {
 
 .fadeUp{ animation:fadeUp .6s ease both; }
 
+/* HOVER ANIMADO */
+.nav ul li a {
+  position: relative;
+  color: #dfe1ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* línea debajo */
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* separación respecto al texto */
+  width: 0%;
+  height: 2px;
+  background: var(--accent2); /* o cualquier color de tu paleta */
+  transition: width 0.3s ease;
+}
+
+/* al pasar el cursor, aparece la línea */
+.nav ul li a:hover::after {
+  width: 100%;
+}
